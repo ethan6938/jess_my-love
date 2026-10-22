@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10070f">
+<title>Jess, You Have My Heart ♡</title>
+<style>
+:root{--bg:#10070f;--wine:#260d20;--rose:#ff91b8;--pink:#ffd8e6;--muted:#d7b6c5;--glass:rgba(255,239,246,.055);--line:rgba(255,174,205,.22)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:#fff0f6;font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 15%,#65204355,transparent 40%),radial-gradient(ellipse at 85% 65%,#70203c42,transparent 38%),linear-gradient(140deg,#10070f,#230b1d 55%,#10070f)}
+a{color:inherit}
+button{font:inherit}
+#sky,#floaties{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+#sky{z-index:-1}
+.star{position:absolute;width:2px;height:2px;background:#ffe8f0;border-radius:50%;animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.5)}}
+.heart{position:absolute;bottom:-40px;color:#ff91b8;opacity:0;text-shadow:0 0 20px #ff91b877;animation:rise linear forwards}
+@keyframes rise{10%{opacity:.75}100%{transform:translateY(-115vh) rotate(28deg);opacity:0}}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:17px clamp(18px,5vw,64px);background:#10070f9c;backdrop-filter:blur(15px);border-bottom:1px solid #ffffff0c}
+.brand{font-size:1.15rem;color:var(--pink);text-decoration:none;letter-spacing:.03em}
+.navlinks{display:flex;gap:24px;font: .8rem Arial,sans-serif;color:var(--muted)}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:white}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:120px 22px 75px;position:relative}
+.hero-inner{max-width:850px}
+.kicker{font:600 .7rem Arial,sans-serif;letter-spacing:.27em;text-transform:uppercase;color:var(--rose)}
+h1{font-weight:400;font-size:clamp(4.2rem,15vw,10rem);line-height:.86;letter-spacing:-.065em;margin:28px 0 22px}
+h1 em{font-weight:400;color:var(--rose);display:block}
+.hero p{font-size:clamp(1.05rem,2.5vw,1.32rem);line-height:1.85;color:var(--muted);max-width:610px;margin:0 auto 30px}
+.pulse-heart{font-size:2.3rem;color:var(--rose);display:block;margin:24px 0;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{border:1px solid #ff91b8a8;border-radius:999px;padding:14px 22px;background:#ff91b81c;color:#fff3f7;text-decoration:none;cursor:pointer;font:600 .86rem Arial,sans-serif;transition:.2s}
+.btn:hover{transform:translateY(-3px);background:#ff91b832;box-shadow:0 12px 36px #ff91b81c}
+.btn.secondary{background:transparent;border-color:#ffffff36}
+.scroll-note{position:absolute;bottom:24px;color:#c9a5b5;font: .68rem Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+section{padding:95px 22px}
+.wrap{max-width:900px;margin:auto;text-align:center}
+.label{color:var(--rose);font:600 .68rem Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:400;letter-spacing:-.035em;margin:15px 0 24px}
+.intro{color:var(--muted);font-size:1.08rem;line-height:1.8;max-width:620px;margin:0 auto}
+.letter{margin:35px auto 0;padding:clamp(25px,6vw,55px);max-width:760px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(140deg,#fff1f709,#ff91b80b);box-shadow:0 25px 100px #0003;position:relative;text-align:left}
+.letter:before{content:"“";position:absolute;top:0;right:25px;color:#ff91b82b;font-size:8rem;line-height:1}
+.letter p{font-size:clamp(1.03rem,2.3vw,1.17rem);line-height:2;color:#f3dce5;position:relative}
+.signature{color:var(--rose);font-style:italic;font-size:1.3rem;margin-top:24px}
+.divider{width:65px;height:1px;background:var(--rose);opacity:.6;margin:30px auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:38px;text-align:left}
+.card{padding:26px 23px;border:1px solid var(--line);border-radius:22px;background:var(--glass);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:#ff91b87a}
+.card .symbol{font-size:1.8rem;color:var(--rose)}
+.card h3{font-weight:400;font-size:1.25rem;margin:15px 0 10px}
+.card p{color:var(--muted);font: .91rem/1.8 Arial,sans-serif;margin:0}
+.memory-box{max-width:720px;margin:34px auto 0;padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--glass)}
+#message{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.85;min-height:100px;margin:20px 0;color:var(--pink)}
+.dots{color:var(--rose);letter-spacing:.3em}
+.closing{padding-top:60px;padding-bottom:100px}
+.closing h2{max-width:700px;margin:18px auto}
+footer{padding:25px 20px 35px;text-align:center;border-top:1px solid #ffffff0e;color:#bc96a8;font-size:.9rem}
+footer span{color:var(--rose)}
+@media(max-width:650px){.navlinks{gap:12px;font-size:.72rem}.cards{grid-template-columns:1fr;max-width:430px;margin-left:auto;margin-right:auto}.card{text-align:center}section{padding:70px 18px}.letter p{line-height:1.85}.brand{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div><div id="floaties" aria-hidden="true"></div>
+<nav>
+  <a class="brand" href="#home">for Jess <span>♡</span></a>
+  <div class="navlinks"><a href="#letter">My letter</a><a href="#promises">Little promises</a><a href="#surprise">Surprise</a></div>
+</nav>
+<main>
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="kicker">A little universe made for one person</div>
+    <h1>Dear <em>Jess.</em></h1>
+    <span class="pulse-heart" aria-hidden="true">♥</span>
+    <p>In a world full of ordinary moments, you have a way of making the little things feel special. This page is yours — a tiny reminder of how much you mean to me.</p>
+    <div class="actions"><a class="btn" href="#letter">Read your letter ♡</a><a class="btn secondary" href="#surprise">A little surprise ✧</a></div>
+  </div>
+  <div class="scroll-note">made with care · just for you ↓</div>
+</header>
+
+<section id="letter">
+  <div class="wrap">
+    <div class="label">From my heart to yours</div>
+    <h2>For the girl who means so much</h2>
+    <p class="intro">Some feelings are too big for one message, but I wanted to make a little place where I could try.</p>
+    <article class="letter">
+      <p>Jess, I wish you could see yourself the way I see you. You would understand why you matter so much to me, why your smile can brighten an ordinary day, and why even the smallest moments with you can mean the world.</p>
+      <p>I don't expect every day to be perfect. I just want to keep showing up with patience, honesty, kindness, and care. I want to listen when you need to talk, make you laugh when the day feels heavy, celebrate your wins, and remind you that you never have to pretend to be okay around me.</p>
+      <p>You deserve to feel valued for exactly who you are — not just on your happiest days, but on the quiet, difficult ones too. I hope I can keep giving you reasons to smile and little reminders that you are appreciated more than you know.</p>
+      <p>So whenever you find this page again, remember this: you are important to me, Jess. If I could wrap every good thought I have about you into a gift, it still wouldn't quite say everything my heart wants you to know.</p>
+      <div class="signature">Always cheering for you, ♡</div>
+    </article>
+  </div>
+</section>
+
+<section id="promises">
+  <div class="wrap">
+    <div class="label">The things that matter</div>
+    <h2>What I want you to feel</h2>
+    <p class="intro">Not just words on a screen — little things worth showing through actions, too.</p>
+    <div class="cards">
+      <article class="card"><div class="symbol">♡</div><h3>Truly appreciated</h3><p>For your heart, your personality, your little quirks, and all the things that make you you.</p></article>
+      <article class="card"><div class="symbol">☾</div><h3>Safe to be yourself</h3><p>You can have quiet days, messy feelings, and imperfect moments. You don't need to put on a brave face all the time.</p></article>
+      <article class="card"><div class="symbol">✧</div><h3>Cheered on</h3><p>Your dreams, your progress, and the tiny victories matter. I hope you always have someone in your corner.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="surprise">
+  <div class="wrap">
+    <div class="label">A pocketful of reminders</div>
+    <h2>For whenever you need a smile</h2>
+    <p class="intro">Tap the button and let the universe deliver you a tiny reminder.</p>
+    <div class="memory-box">
+      <div class="dots">✦ · ♡ · ✦</div>
+      <p id="message" aria-live="polite">Jess, this little space is here to remind you that you matter. 💗</p>
+      <button class="btn" id="surpriseBtn" type="button">One more reminder 💌</button>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="label">One last thing</div>
+    <h2>Out of all the pages in the world, this one will always be <em style="color:var(--rose)">yours.</em></h2>
+    <span class="pulse-heart" aria-hidden="true">♥</span>
+    <p class="intro">Made with care, a little bit of magic, and Jess in mind.</p>
+  </div>
+</section>
+</main>
+<footer>For Jess, with <span>♥</span> — a little reminder, whenever you need it.</footer>
+<script>
+const sky=document.getElementById('sky'), floaties=document.getElementById('floaties');
+for(let i=0;i<85;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*4+'s';s.style.animationDuration=(2+Math.random()*3)+'s';sky.appendChild(s)}
+function heart(){const h=document.createElement('span');h.className='heart';h.textContent=Math.random()>.45?'♥':'♡';h.style.left=Math.random()*100+'%';h.style.fontSize=(13+Math.random()*24)+'px';h.style.animationDuration=(8+Math.random()*8)+'s';floaties.appendChild(h);setTimeout(()=>h.remove(),17000)}
+for(let i=0;i<12;i++)setTimeout(heart,i*420);setInterval(heart,1150);
+const notes=[
+'Jess, you are more appreciated than you probably realise. I hope something lovely finds you today. 🌷',
+'You never have to be perfect to deserve patience, gentleness, and care. ♡',
+'If today is difficult, take it one moment at a time. You deserve kindness on the hard days too. 🌙',
+'You make ordinary moments feel a little more magical just by being yourself. ✨',
+'This page is a tiny reminder that someone is thinking of you and hoping you smile. 💗',
+'Keep being your wonderful self, Jess. There is so much about you worth celebrating. 🌸',
+'No big speech today — just a little reminder that you matter. Always keep that close. 💌'
+];let previous=-1;
+document.getElementById('surpriseBtn').addEventListener('click',()=>{let n;do{n=Math.floor(Math.random()*notes.length)}while(n===previous);previous=n;document.getElementById('message').textContent=notes[n];for(let i=0;i<8;i++)setTimeout(heart,i*110)});
+</script>
+</body>
+</html>
